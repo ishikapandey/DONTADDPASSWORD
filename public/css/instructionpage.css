@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+ background: rgba(0, 0, 0, 0.7) url('../img/instructionsbg.png') ; 
+    background-size: cover; 
+    background-position: top;
+    background-blend-mode: lighten; 
+}
+.instruction {
+    border: 30px;
+    border-width: 0px;
+    border-style: solid;
+    margin: 0px 400px 400px 0px;
+    margin-left: 700px;
+    margin-right: 50px;
+    padding: 80px 40px 40px;
+    padding-right: 12px;
+    padding-left: 80px;
+    border-color: white;
+    background-image: url('../img/scroll2.png'); 
+    background-size: 105% 107%;
+      word-wrap: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.instruction h1 {
+    font-family: 'Rye', 'cursive';
+  color: rgb(49, 35, 13);
+}
+.instruction ol {
+  font-family: 'MedievalSharp', 'cursive';
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2px;
+  color: rgb(61, 46, 25);
+}
+ /* Home Button */
+ .home_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 20%;
+    font-family: 'rye', 'cursive';
+    font-size: 1.2rem;
+    background-image: url(../img/redbutton.png);
+    padding: 10px 20px;
+    border-color: #FCC201;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+  }
+  .home_button a {
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  .home_button:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FCC201;
+    transition: all 0.35s;
+    border-radius: 2px;
+  }
+  .home_button:hover:after {
+    width: 100%;
+  }

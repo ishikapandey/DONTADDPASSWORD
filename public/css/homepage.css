@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(rgba(7, 7, 31, 0.473),rgba(7, 7, 31, 0.473)),url('../img/homebg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: lighten; 
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+  /* Hero Section */
+  .hero {
+    padding: 120px;
+    padding-bottom: 204px ;
+  }
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+  }
+  .hero__heading {
+    font-family: 'Rye', 'cursive';
+    font-size: 60px;
+    margin-bottom: 24px;
+  
+  }
+  .hero__heading span {
+    color: rgb(247, 247, 225);
+  }
+  .hero__description {
+    font-family: 'MedievalSharp', 'cursive';
+    font-size: 40px;
+    color: #fffcdc;
+  }
+
+  /* Buttons */
+
+   .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 20%;
+    font-family: 'rye', 'cursive';
+    font-size: 1.2rem;
+    background-image: url(../img/redbutton.png);
+    padding: 10px 20px;
+    border-color: #FCC201 ;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+  }
+  .button a {
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  .button:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FCC201;
+    transition: all 0.35s;
+    border-radius: 2px;
+  }
+  .button:hover:after {
+    width: 100%;
+  }
+   .button{
+    display:inline-block;
+    margin-right:5px;
+   }
+   .hero__button{
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+   }
+
+  @media screen and (max-width: 768px) {
+    .hero__heading {
+      font-size: 60px;
+    }
+  
+    .hero__description {
+      font-size: 40px;
+    }
+  }
