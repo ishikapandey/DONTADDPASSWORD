@@ -16,19 +16,19 @@ router.get('/ginstruction',(req,res)=> res.render('gameinstructionpage'));
 router.get('/login', forwardAuthenticated, (req, res) => res.render('loginpage'));
 
 router.get('/bonus1',(req,res)=>{
-  if(req.body.answer=4)
+  if(req.body.answer===4)
   armySize+=100;
   User.findOneAndUpdate({username:username},{armySize: armySize});
   res.render('/game',{hidden:'hidden'});
 })
 router.get('/bonus2',(req,res)=>{
-  if(req.body.answer=4)
+  if(req.body.answer===4)
   armySize+=100;
   User.findOneAndUpdate({username:username},{armySize: armySize});
   res.render('/game',{hidden:'hidden'})
 })
 router.get('/bonus3',(req,res)=>{
-  if(req.body.answer=4)
+  if(req.body.answer===4)
   armySize+=100;
   User.findOneAndUpdate({username:username},{armySize: armySize});
   res.render('/game',{hidden:'hidden'})

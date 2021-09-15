@@ -7,8 +7,7 @@ const session = require('express-session');
 const passportLocalMongoose = require("passport-local-mongoose");
 
 const app = express();
-// const ques=require('./config/ques');
-const mapData= require('countryNames');
+
 // Passport Config
 require('./config/passport')(passport);
 
@@ -47,7 +46,7 @@ app.use(
   })
 );
 
-passport.use(User.createStrategy());
+// passport.use(User.createStrategy());
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());

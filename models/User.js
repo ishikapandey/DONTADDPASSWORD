@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.set("useCreateIndex", true);
-mongoose.set('useFindAndModify', false);
+// mongoose.set("useCreateIndex", true);
+// mongoose.set('useFindAndModify', false);
 const UserSchema = new mongoose.Schema({
     name:{
         type:String,
@@ -29,7 +29,7 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-UserSchema.plugin(passportLocalMongoose);
+// UserSchema.plugin(passportLocalMongoose);
 const User = mongoose.model('User',UserSchema);
 
 module.exports = User;
