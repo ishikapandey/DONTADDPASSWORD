@@ -1,15 +1,27 @@
-const express = require("express");
-const mongoose = require("mongoose");
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const app = express();
+// const ques=require('./config/ques');
+const mapData= require('countryNames');
+// Passport Config
+require('./config/passport')(passport);
 
-// DB configured
+// DB Config
 const db = require('./config/key').MongoURI;
 
-// Connect to database
-mongoose.connect(db,{ useNewUrlParser:true })
-.then(()=>console.log('MongoDb connecting.... connected!'))
-.catch(err=>console.log(err));
+// Connect to MongoDB
+mongoose
+  .connect(db,
+    { useNewUrlParser: true ,useUnifiedTopology: true}
+  )
+  .then(() => console.log('MongoDB Connecting......Connected!'))
+  .catch(err => console.log(err));
 
 // static Files 
 app.use(express.static('public'));
@@ -23,19 +35,27 @@ app.set('views','views');
 app.set('view engine','ejs');
 // views directory and not view 
 
-// BodyParser 
-app.use(express.urlencoded({ extended:false}));
+// Express body parser
+app.use(express.urlencoded({ extended: true }));
 
-// app.get('/',(req,res)=>{
-// res.render('homepage');
-// });
+// Express session
+app.use(
+  session({
+    secret: 'Innerve-tc',
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+passport.use(User.createStrategy());
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
-app.use('/',require('./routes/index'));
-app.use('/login',require('./routes/users'));
+app.use('/', require('./routes/index.js'));
 
-const PORT = process.env.PORT || 3000; 
-// for when we deploy 
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT,console.log(`Server started on ${PORT}`));
+app.listen(PORT, console.log(`Server running on  ${PORT}`));
 

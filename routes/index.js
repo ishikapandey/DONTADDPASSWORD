@@ -1,30 +1,64 @@
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
+// Load User model
+const User = require('../models/User');
+
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
 //Homepage
-router.get('/',(req,res)=> res.render('homepage'));
+router.get('/', forwardAuthenticated, (req,res)=> res.render('homepage'));
 router.get('/about',(req,res)=> res.render('aboutpage'));
 router.get('/hinstruction',(req,res)=> res.render('instructionpage'));
 router.get('/ginstruction',(req,res)=> res.render('gameinstructionpage'));
-router.get('/login',(req,res)=> res.render('loginpage'));
 
+// Login page
+router.get('/login', forwardAuthenticated, (req, res) => res.render('loginpage'));
+
+router.get('/bonus1',(req,res)=>{
+  if(req.body.answer=4)
+  armySize+=100;
+  User.findOneAndUpdate({username:username},{armySize: armySize});
+  res.render('/game',{hidden:'hidden'});
+})
+router.get('/bonus2',(req,res)=>{
+  if(req.body.answer=4)
+  armySize+=100;
+  User.findOneAndUpdate({username:username},{armySize: armySize});
+  res.render('/game',{hidden:'hidden'})
+})
+router.get('/bonus3',(req,res)=>{
+  if(req.body.answer=4)
+  armySize+=100;
+  User.findOneAndUpdate({username:username},{armySize: armySize});
+  res.render('/game',{hidden:'hidden'})
+})
 //Game page
-router.get('/endpage',(req,res)=> res.render('endpage'));
-router.get('/game',(req,res)=> res.render('game'));
 
-// post 
-router.post('/login',(req,res)=>res.render('game'));
+router.get('/game', ensureAuthenticated, (req, res) =>
+  res.render('game', {
+    user: req.user,
+    armySize:User.armySize
+  })
+);
+
+// Post 
+// Login
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+        successRedirect: '/game',
+        failureRedirect: '/login'
+        // failureFlash:true
+    })(req, res, next);
+});
+
+router.post('/game',(req,res)=>{
+    const username= req.body.username;
+});
+// Logout
+router.get('/endpage', (req, res) => {
+    req.logout();
+    res.redirect('endpage');
+});
 
 module.exports = router;
-
-
-
-
-
-// router.get('/instruction',(req,res)=> {
-//     const text ='';
-//     if(req.body.home)
-//     res.render('instructionpage',{text:'hello'});
-//     // else if(req.body.game)
-//     // res.render('instructionpage',{text:'/game'});
-// });
