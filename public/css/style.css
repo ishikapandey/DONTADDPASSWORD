@@ -1,5 +1,5 @@
 body {
-    background-image: url("../img/Ship-background.png");
+    background-image: url("/img/Ship-background.png");
     height: 100% ;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,11 +49,6 @@ body {
 .bg-active{
     visibility: visible;
     opacity: 1;
-}
-.bg-grey{
-    visibility: visible;
-    opacity: 1;
-    background-color: grey;
 }
 .modal{
     position: relative;
@@ -152,7 +147,3 @@ span{
     background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
 }  
-
-.hidden{
-    visibility: hidden;
-}

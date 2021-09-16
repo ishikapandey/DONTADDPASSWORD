@@ -35,8 +35,9 @@ router.get('/bonus3',(req,res)=>{
 })
 //Game page
 
-router.get('/game', ensureAuthenticated, (req, res) =>
+router.get('/game',  (req, res) =>
   res.render('game', {
+    hidden:'',
     user: req.user,
     armySize:User.armySize
   })
