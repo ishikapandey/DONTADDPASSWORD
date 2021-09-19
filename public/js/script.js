@@ -15,6 +15,18 @@ var Btn8 = document.querySelector('.idzora');
 var Btn9 = document.querySelector('.qaevia');
 var Btn10 = document.querySelector('.wrafuthen');
 
+// var PBtn1 = document.querySelector('.Petherion');
+// var PBtn2 = document.querySelector('.Psilven');
+// var PBtn3 = document.querySelector('.Pgorene');
+// var PBtn4 = document.querySelector('.Pyitanada');
+// var PBtn5 = document.querySelector('.Pdenera');
+// var PBtn6 = document.querySelector('.Parthora');
+// var PBtn7 = document.querySelector('.Pmiorbmark');
+// var PBtn8 = document.querySelector('.Pidzora');
+// var PBtn9 = document.querySelector('.Pqaevia');
+// var PBtn10 = document.querySelector('.Pwrafuthen');
+
+var armySize = document.querySelector('.army').id;
 
 modalBtn[0].addEventListener('click',function(){
     modalBg[0].classList.add('bg-active');
@@ -48,8 +60,9 @@ modalClose[2].addEventListener('click',function(){
     modalBg[2].classList.remove('bg-active');
 })
 
-
+// etherion
 Btn1.addEventListener('click',function(){
+    if(armySize>=900)
     modalBg[3].classList.add('bg-active');
 });
 submitBtn[3].addEventListener('click',function(){
@@ -60,6 +73,7 @@ modalClose[3].addEventListener('click',function(){
 })
 
 Btn2.addEventListener('click',function(){
+    if(armySize>=1000)
     modalBg[4].classList.add('bg-active');
 });
 submitBtn[4].addEventListener('click',function(){
@@ -70,6 +84,7 @@ modalClose[4].addEventListener('click',function(){
 })
 
 Btn3.addEventListener('click',function(){
+    if(armySize>=400)
     modalBg[5].classList.add('bg-active');
 });
 submitBtn[5].addEventListener('click',function(){
@@ -80,6 +95,7 @@ modalClose[5].addEventListener('click',function(){
 })
 
 Btn4.addEventListener('click',function(){
+    if(armySize>=800)
     modalBg[6].classList.add('bg-active');
 });
 submitBtn[6].addEventListener('click',function(){
@@ -90,6 +106,7 @@ modalClose[6].addEventListener('click',function(){
 })
 
 Btn5.addEventListener('click',function(){
+    if(armySize>=300)
     modalBg[7].classList.add('bg-active');
 });
 submitBtn[7].addEventListener('click',function(){
@@ -100,6 +117,7 @@ modalClose[7].addEventListener('click',function(){
 })
 
 Btn6.addEventListener('click',function(){
+    if(armySize>=500)
     modalBg[8].classList.add('bg-active');
 });
 submitBtn[8].addEventListener('click',function(){
@@ -110,6 +128,7 @@ modalClose[8].addEventListener('click',function(){
 })
 
 Btn7.addEventListener('click',function(){
+    if(armySize>=1000)
     modalBg[9].classList.add('bg-active');
 });
 submitBtn[9].addEventListener('click',function(){
@@ -120,6 +139,7 @@ modalClose[9].addEventListener('click',function(){
 })
 
 Btn8.addEventListener('click',function(){
+    if(armySize>=1000)
     modalBg[10].classList.add('bg-active');
 });
 submitBtn[10].addEventListener('click',function(){
@@ -130,6 +150,7 @@ modalClose[10].addEventListener('click',function(){
 })
 
 Btn9.addEventListener('click',function(){
+    if(armySize>=700)
     modalBg[11].classList.add('bg-active');
 });
 submitBtn[11].addEventListener('click',function(){
@@ -139,6 +160,7 @@ modalClose[11].addEventListener('click',function(){
     modalBg[11].classList.remove('bg-active');
 })
 Btn10.addEventListener('click',function(){
+    if(armySize>=600)
     modalBg[12].classList.add('bg-active');
 });
 submitBtn[12].addEventListener('click',function(){

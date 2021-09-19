@@ -1,9 +1,9 @@
 body {
-    background-image: url("/img/Ship-background.png");
-    height: 100% ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("/img/Ship-background.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #svg9 {
@@ -14,136 +14,197 @@ body {
   padding: 28px;
 }
 
-.Button{
-    background-color:transparent;
-    color:black;
-    border-color:navy;
-    padding: 8px;
-    cursor: pointer;
-    margin-top: 8px;
-    margin-left: 10px;
-    font-size: 115%;
-    font-family: 'Courgette', cursive;
+.Button {
+  background-color: transparent;
+  color: black;
+  border-color: navy;
+  padding: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 10px;
+  font-size: 115%;
+  font-family: "Courgette", cursive;
 }
-.Button:hover{
-    background: #009FFF;  
-    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  
-    background: linear-gradient(to right, #ec2F4B, #009FFF); 
-    color:white;
-}
-
-.modal-bg{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
-}
-.bg-active{
-    visibility: visible;
-    opacity: 1;
-}
-.modal{
-    position: relative;
-    border-radius: 25px;
-    z-index: 1;
-    position: relative;
-    background-color: #E7E0C9;
-    color:black;
-    width: 50%;
-    height:50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid black;
+.Button:hover {
+  background: #009fff;
+  background: -webkit-linear-gradient(to right, #ec2f4b, #009fff);
+  background: linear-gradient(to right, #ec2f4b, #009fff);
+  color: white;
 }
 
-.modal-close{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-weight: bold;
-    cursor: pointer;
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal {
+  position: relative;
+  border-radius: 25px;
+  z-index: 1;
+  position: relative;
+  background-color: #e7e0c9;
+  color: black;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
 }
 
-.modal button{
-    border-radius: 25px;
-    padding: 10px 30px;
-    background-color:black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.answer{
-    border-radius: 25px;
-}
-span{
-    font-weight: bold;
-    position: absolute;
-    top:110%;
-}
-.question{
-    font-weight: bold;
-    font-size: 2rem;
-}
-.bg-img{
-    z-index: -1;
-    border-radius: 25px;
-    position: absolute;
-    width:100%;
-    height: 100%;
+.modal button {
+  border-radius: 25px;
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.container{
-    background-color:rgba(229, 226, 226, 0.986);
-    width: 25%;
-    float: right;
-    height: 32px;
-    margin-top: 8px;
-    margin-right: 10px;
+.answer {
+  border-radius: 25px;
+}
+span {
+  font-weight: bold;
+  position: absolute;
+  top: 110%;
+}
+.question {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.bg-img {
+  z-index: -1;
+  border-radius: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.bar{
-    background-color:salmon;
-    width:30%;
-    float: right;
-    height: 32px;
-    
+.container {
+  background-color: rgba(229, 226, 226, 0.986);
+  width: 25%;
+  float: right;
+  height: 32px;
+  margin-top: 8px;
+  margin-right: 10px;
 }
 
-.army{
-    text-align: right;
-    margin-right: 120px;
-    font-size: 138%;
-    font-family: 'El Messiri', sans-serif;
+.bar {
+  background-color: salmon;
+  width: 30%;
+  float: right;
+  height: 32px;
 }
 
-.GameOver{
-    float: right;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    padding: 23px;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: transparent;
-    border-color:#1a2a6c;
-    font-family: 'Merriweather', serif;
-    font-size: 16px;
-} 
-  
-.GameOver:hover{
-    background: #43C6AC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-}  
+.army {
+  text-align: right;
+  margin-right: 120px;
+  font-size: 138%;
+  font-family: "El Messiri", sans-serif;
+}
+
+.GameOver {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  padding: 23px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+  border-color: #1a2a6c;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+}
+
+.GameOver:hover {
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #191654,
+    #43c6ac
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #191654,
+    #43c6ac
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+.bon1 {
+  visibility: hidden;
+}
+.bon2 {
+  visibility: hidden;
+}
+.bon3 {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+  /* opacity: 1; */
+}
+/* 
+.Petherion {
+  opacity: 0;
+}
+
+.Pdenera {
+  visibility: hidden;
+}
+.Pgorene {
+  visibility: hidden;
+}
+
+.Parthora {
+  visibility: hidden;
+}
+
+.Pwrafuthen {
+  visibility: hidden;
+}
+
+.Pqaevia {
+  visibility: hidden;
+}
+
+.Pyitanada {
+  visibility: hidden;
+}
+
+.Psilven {
+  visibility: hidden;
+}
+
+.Pidzora {
+  visibility: hidden;
+}
+
+.Pmiorbmark {
+  visibility: hidden;
+} */
