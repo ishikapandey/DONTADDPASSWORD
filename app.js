@@ -247,10 +247,13 @@ app.post("/etherion", (req, res) => {
   const username = req.body.username;
   var etherion = req.body.etherion;
   if (etherion == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 400;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -265,15 +268,17 @@ app.post("/etherion", (req, res) => {
   qaevia = qaevia;
   res.redirect("/game");
 });
-
 app.post("/silven", (req, res) => {
   const username = req.body.username;
   var silven = req.body.silven;
   if (silven == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 350;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = "silven";
@@ -293,10 +298,13 @@ app.post("/gorene", (req, res) => {
   const username = req.body.username;
   var gorene = req.body.gorene;
   if (gorene == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 200;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -316,10 +324,13 @@ app.post("/yitanada", (req, res) => {
   const username = req.body.username;
   var yitanada = req.body.yitanada;
   if (yitanada == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 500;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -339,10 +350,13 @@ app.post("/danera", (req, res) => {
   const username = req.body.username;
   var danera = req.body.danera;
   if (danera == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 150;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -362,10 +376,13 @@ app.post("/arthora", (req, res) => {
   const username = req.body.username;
   var arthora = req.body.arthora;
   if (arthora == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 250;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -385,10 +402,13 @@ app.post("/miorbmark", (req, res) => {
   const username = req.body.username;
   var miorbmark = req.body.miorbmark;
   if (miorbmark == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 450;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -408,10 +428,13 @@ app.post("/idzora", (req, res) => {
   const username = req.body.username;
   var idzora = req.body.idzora;
   if (idzora == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 250;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -431,10 +454,13 @@ app.post("/qaevia", (req, res) => {
   const username = req.body.username;
   var qaevia = req.body.qaevia;
   if (qaevia == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 350;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
@@ -454,10 +480,13 @@ app.post("/wrafuthen", (req, res) => {
   const username = req.body.username;
   var wrafuthen = req.body.wrafuthen;
   if (wrafuthen == 4) {
-    armySize = armySize + 100;
-    console.log("chalgya");
+    armySize = armySize + 300;
+    //console.log("chalgya");
   }
-  console.log("yeh wala " + armySize);
+  else{
+    armySize-=100;
+  }
+  //console.log("yeh wala " + armySize);
 
   User.findOneAndUpdate({ username: username }, { armySize: armySize });
   silven = silven;
